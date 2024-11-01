@@ -66,13 +66,14 @@ This project implements a comprehensive Multi-modal Retrieval Augmented Generati
 
 **Documentation**: [[Codelab Documentation Link]](https://codelabs-preview.appspot.com/?file_id=16rva6cQAW035xxCOuIZzpcxS_c5HmKfPp2t2TbLWZ6A#6)
 
-**Demo Video Link**: [Video Link]
+**Demo Video Link**: [[Video Link]](https://drive.google.com/drive/folders/19WdASkqfI6Gu0sSCoISPBfGuDf1uzKm7?usp=sharing)
 
-**Application URL**: http://viswanath.me:8501/
+**Application URL**: [http://viswanath.me:8501/](http://35.223.189.207:8501/)
 
-**Backend Service Link**: http://viswanath.me:8000/docs
+**Backend Service Link**: [http://viswanath.me:8000/docs](http://35.223.189.207:8000/docs)
 
-**Data Processing Link**: http://localhost:8080/home
+**Diagrams link**: 
+
 
 ## Architecture Diagram:
 ![multi-modal_rag_system](https://github.com/user-attachments/assets/0efea28d-9969-48b4-8fb9-2073f7508273)
@@ -164,65 +165,12 @@ Comprehensive interface for document interaction:
 ## Technical Details
 
 ### Data Flow
-1. **Data Ingestion**:
-```python
-# Airflow DAG task for web scraping
-def scrape_cfa_publications():
-    # Web scraping logic
-    page_content = get_page_content(url)
-    publications = extract_publications(page_content)
-    for pub in publications:
-        process_publication(pub)
-```
+1. **Data Ingestion**
 
-2. **Document Processing**:
-```python
-# PDF processing with PyMuPDF
-def process_pdf(pdf_content):
-    doc = fitz.open(stream=pdf_content, filetype="pdf")
-    text_content = ""
-    images = []
-    for page in doc:
-        text_content += page.get_text()
-        images.extend(page.get_images())
-    return text_content, images
-```
+2. **Document Processing**
 
-3. **RAG Implementation**:
-```python
-# Multi-modal RAG query processing
-async def process_query(query, context):
-    # Initialize RAG components
-    text_embeddings = generate_embeddings(query)
-    relevant_chunks = retrieve_context(text_embeddings)
-    
-    # Generate response
-    response = await generate_response(query, relevant_chunks)
-    return response
-```
+3. **RAG Implementation**
 
-### Storage Schema
-
-1. **Snowflake Table Structure**:
-```sql
-CREATE TABLE publications (
-    title STRING,
-    brief_summary STRING,
-    pdf_link STRING,
-    image_link STRING,
-    created_at TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP()
-);
-```
-
-2. **Vector Store Configuration**:
-```python
-vector_store = MilvusVectorStore(
-    host=MILVUS_HOST,
-    port=MILVUS_PORT,
-    dim=1024,
-    collection_name="document_store"
-)
-```
 
 ## Project Structure
 ```.
@@ -259,6 +207,21 @@ vector_store = MilvusVectorStore(
 │   ├── publications_data.csv
 │   ├── requirements.txt
 │   └── snowflake_con_test.py
+├── diagrams
+│   ├── Assignment3_diagrams.ipynb
+│   ├── airflow_icon.png
+│   ├── cfa_icon.png
+│   ├── docker_icon.png
+│   ├── fastapi_icon.png
+│   ├── hf_icon.png
+│   ├── llamaparse_icon.png
+│   ├── milvus_icon.png
+│   ├── multi-modal_rag_system.png
+│   ├── nvidia_icon.png
+│   ├── openai_icon.png
+│   ├── selenium_icon.png
+│   ├── snowflake_icon.png
+│   └── streamlit_icon.png
 ├── docker-compose.yml
 └── requirements.txt
 ```
@@ -272,7 +235,7 @@ vector_store = MilvusVectorStore(
 - OpenAI API Key
 - NVIDIA API Key (optional)
 
-1. Clone the repository to get all the source code on your machine 
+## Set Up Application Locally
  ```
  docker push Username/ImageNameForFastapi:latest
  ```
@@ -342,6 +305,3 @@ networks:
 sudo docker-compose pull
 sudo docker-compose up -d
 ```
- 
-## Accessing Application via Cloud:
-After deploying application through Cloud, you can use the application at url: http://viswanath.me:8501/
