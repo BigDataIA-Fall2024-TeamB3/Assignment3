@@ -272,102 +272,76 @@ vector_store = MilvusVectorStore(
 - OpenAI API Key
 - NVIDIA API Key (optional)
 
-### Environment Variables
-```bash
-# AWS Configuration
-AWS_ACCESS_KEY_ID=your_access_key
-AWS_SECRET_ACCESS_KEY=your_secret_key
-AWS_REGION=us-east-1
-S3_BUCKET=your_bucket_name
+1. Clone the repository to get all the source code on your machine 
+ ```
+ docker push Username/ImageNameForFastapi:latest
+ ```
+ + Push Streamlit:
+ ```
+ docker push Username/ImageNameForStreamlit:latest
+ ```
+## Deploy in GCP VM
 
-# Snowflake Configuration
-SNOWFLAKE_ACCOUNT=your_account
-SNOWFLAKE_USER=your_user
-SNOWFLAKE_PASSWORD=your_password
-SNOWFLAKE_DATABASE=your_database
-SNOWFLAKE_SCHEMA=your_schema
+7. GCP docker setup, create folder, create docker compose file, scp the .env and json file, pull the images, run docker compose.
+ + Install Docker:
+ ```
+ sudo apt update
+ sudo apt install -y docker.io
+ ```
+ + Install Docker Compose:
+ ```
+ sudo curl -L "https://github.com/docker/compose/releases/download/v2.21.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+ sudo chmod +x /usr/local/bin/docker-compose
+ ```
+ + Create a Directory for Your Project:
+ ```
+ mkdir ~/yourapp
+ cd ~/yourapp
+ ```
+ + scp json file to myapp and .env
+ ```
+ gcloud compute scp --project YourProjectName --zone YourZone-f /path to your root dir/ServiceAccountJson Username@InstanceName:/PathInGCPToyourapp/ServiceAccountJson
+ gcloud compute scp --project YourProject --zone YourZone-f /path to your root dir/.env Username@InstanceName:/PathInGCPToyourapp/.env
+ ```
+8. nano docker-compose.yml:
+```
+services:
+  fastapi:
+    image: Username/ImageNameForFastapi:latest  # Pull from Docker Hub
+    container_name: YourFastapiContainer
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./.env  # Pass the .env file located in the root directory at runtime
+    volumes:
+      - ./ServiceAccountJson:/app/ServiceAccountJson  # Mount the JSON file at runtime
+    networks:
+      - app-network
 
-# API Keys
-OPENAI_API_KEY=your_openai_key
-NVIDIA_API_KEY=your_nvidia_key
+  streamlit:
+    image: Username/ImageNameForStreamlit:latest  # Pull from Docker Hub
+    container_name: YourStreamlitContainer
+    ports:
+      - "8501:8501"
+    depends_on:
+      - fastapi
+    env_file:
+      - ./.env  # Pass the .env file located in the root directory at runtime
+    volumes:
+      - ./ServiceAccountJson:/app/ServiceAccountJson  # Mount the JSON file at runtime
+    networks:
+      - app-network
 
-# Application Settings
-JWT_SECRET_KEY=your_secret_key
-FRONTEND_URL=http://localhost:8501
-BACKEND_URL=http://localhost:8000
+networks:
+  app-network:
+    driver: bridge
 ```
 
-### Local Development Setup
-1. Clone the repository:
-```bash
-git clone [repository-url]
-cd [repository-name]
+9. Pull the Docker images and Start the containers:
 ```
-
-2. Set up environment variables:
-```bash
-cp .env.example .env
-# Edit .env with your credentials
+sudo docker-compose pull
+sudo docker-compose up -d
 ```
-
-3. Start the development environment:
-```bash
-docker-compose -f docker-compose.dev.yml up -d
-```
-
-### Production Deployment
-1. Configure production environment:
-```bash
-docker-compose -f docker-compose.prod.yml up -d
-```
-
-2. Access the applications:
-- Frontend: http://localhost:8501
-- Backend: http://localhost:8000/docs
-- Airflow: http://localhost:8080
-
-## API Documentation
-Full API documentation available at http://viswanath.me:8000/docs
-
-### Key Endpoints:
-1. **Authentication**:
-   - POST /register
-   - POST /login
-   - GET /users/me
-
-2. **Document Management**:
-   - GET /documents
-   - GET /document-content
-   - POST /analyze-documents
-
-3. **Analysis**:
-   - POST /generate-report
-   - POST /query
-   - POST /summarize
-
-## Future Enhancements
-1. **Advanced Search**:
-   - Semantic search capabilities
-   - Cross-document references
-   - Historical analysis
-
-2. **UI Improvements**:
-   - Real-time collaboration
-   - Advanced visualization
-   - Custom report templates
-
-3. **Technical Upgrades**:
-   - GPU acceleration
-   - Enhanced caching
-   - Distributed processing
-
-## Troubleshooting Guide
-1. **Common Issues**:
-   - Docker container startup failures
-   - Database connection issues
-   - API authentication problems
-
-2. **Solutions**:
-   - Check environment variables
-   - Verify network connectivity
-   - Review container logs
+ 
+## Accessing Application via Cloud:
+After deploying application through Cloud, you can use the application at url: http://viswanath.me:8501/
