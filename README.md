@@ -88,8 +88,9 @@ This project implements a comprehensive Multi-modal Retrieval Augmented Generati
 
 **Data Processing Link**: http://localhost:8080/home
 
-## Architecture
-![multimodal_rag_architecture](architecture_diagram_link)
+## Architecture Diagram:
+![multi-modal_rag_system](https://github.com/user-attachments/assets/0efea28d-9969-48b4-8fb9-2073f7508273)
+
 
 
 ## About
