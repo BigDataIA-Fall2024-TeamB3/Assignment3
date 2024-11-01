@@ -27,52 +27,38 @@ Contribution:
 
 - **FastAPI Backend**:
   - Implemented secure endpoints
-  - Created document analysis routes
   - Developed Q&A functionality
   - Integrated JWT authentication
 
 - **Report Generation**:
-  - Developed multi-modal report templates
   - Implemented image integration
-  - Created PDF export functionality
-  - Designed report styling
+  - Designed report response
 
 ### Snehal Shivaji Molavade
 - **Data Pipeline**:
   - Designed Airflow DAG architecture
-  - Implemented web scraping logic
-  - Created data validation checks
-  - Managed error handling
+  - Implemented web scraping
 
 - **Storage Integration**:
   - Set up AWS S3 configuration
   - Implemented Snowflake integration
-  - Created storage optimization
-  - Managed data migration
 
 - **Multi-modal Processing**:
   - Implemented text extraction
   - Developed image processing
   - Created metadata management
-  - Optimized processing pipeline
 
 ### Sai Vivekanand Reddy Vangala
 - **RAG Implementation**:
-  - Set up NVIDIA model integration
-  - Implemented vector storage
-  - Created context management
-  - Developed retrieval logic
+  - Set up llm model integration
+  - Implemented vector db
 
 - **Docker Configuration**:
   - Created containerization setup
   - Managed service orchestration
-  - Optimized container performance
-  - Implemented CI/CD pipeline
 
 - **Documentation**:
-  - Created technical documentation
   - Designed architecture diagrams
-  - Wrote API documentation
   - Managed project documentation
 
 ## Description
@@ -96,7 +82,7 @@ This project implements a comprehensive Multi-modal Retrieval Augmented Generati
 ## About
 
 ### Problem Statement
-The challenge we addressed was to create an intelligent system that could effectively process, analyze, and present CFA Institute's research publications. We needed to handle both text and visual content, implement advanced retrieval mechanisms, and provide users with tools to interact with this knowledge base effectively.
+The challenge we addressed was to create an intelligent system that could effectively process, analyze, and present CFA Institute's research publications. We needed to handle both text and visual content, implement retrieval mechanisms, and provide users with tools to interact with this knowledge base effectively.
 
 ### Scope
 The project encompasses several key areas that work together to create a comprehensive solution:
@@ -113,9 +99,9 @@ The Backend Services, built with FastAPI, handle all the complex processing whil
 
 ### Key Features
 
-Our Data Processing capabilities are comprehensive and automated. The system handles document extraction, including both text and images, and processes this content to enable intelligent retrieval. The processed data is then stored securely and efficiently in our cloud infrastructure.
+Our Data Processing capabilities are comprehensive and automated. The system handles document extraction, including both text and images, and processes this content to enable intelligent retrieval. The processed data is then stored securely and efficiently in snowflake and AWS.
 
-The Document Analysis system is powered by advanced AI models that understand both text and visual content. Users can generate summaries, ask questions, and receive answers that draw from the entire knowledge base. The system maintains context awareness, ensuring responses are relevant and accurate.
+The Document Analysis system is powered by llm models that understand both text and visual content. Users can generate summaries, ask questions, and receive answers that draw from the entire knowledge base. The system maintains context awareness, ensuring responses are relevant and accurate.
 
 Our Report Generation feature creates professional documents that combine text and visual elements in the responses. These visual knowledge in reports make it easy to share insights from the analysis.
 
@@ -128,12 +114,10 @@ The system begins with automated data collection from CFA Institute Research Fou
   - Extracts PDF files, titles, and summaries
   - Downloads images from publications
   - Processes metadata systematically
-  - Implements error handling and retry mechanisms
 
 - **Storage Integration**:
   - AWS S3 buckets for PDFs and images
   - Snowflake database for structured metadata
-  - Efficient data organization and retrieval systems
 
 ### 2. Multi-modal RAG Implementation
 Advanced RAG system combining text and image analysis:
@@ -141,13 +125,11 @@ Advanced RAG system combining text and image analysis:
 - **Text Processing**:
   - Document chunking and indexing
   - Semantic understanding
-  - Context preservation
   - Vector embeddings generation
 
 - **Image Processing**:
   - Visual content extraction
   - Image-text alignment
-  - Feature extraction
   - Multi-modal context integration
 
 - **RAG Components**:
@@ -166,10 +148,7 @@ Robust security measures protect user data and system access:
 Comprehensive interface for document interaction:
 
 - **Document Selection**:
-  - Grid view with thumbnails
-  - Dropdown navigation
-  - Search functionality
-  - Filtering options
+  - Grid view with thumbnails, titles
 
 - **Document Viewer**:
   - PDF rendering
