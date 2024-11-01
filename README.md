@@ -1,232 +1,393 @@
-# Multimodal RAG System for CFA Publications
-
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+# Multi-modal RAG System for CFA Publications
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Apache Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white)](https://airflow.apache.org/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 [![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com)
 [![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white)](https://www.snowflake.com/)
 [![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com)
-[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
-[![NVIDIA](https://img.shields.io/badge/NVIDIA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)](https://www.nvidia.com/)
-[![LlamaIndex](https://img.shields.io/badge/LlamaIndex-000000?style=for-the-badge&logo=llama&logoColor=white)](https://llamaindex.ai/)
-[![Milvus](https://img.shields.io/badge/Milvus-00A4FF?style=for-the-badge&logo=milvus&logoColor=white)](https://milvus.io/)
+[![Milvus](https://img.shields.io/badge/Milvus-00A4E4?style=for-the-badge&logo=milvus&logoColor=white)](https://milvus.io/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
 
 WE ATTEST THAT WE HAVEN'T USED ANY OTHER STUDENTS' WORK IN OUR ASSIGNMENT AND ABIDE BY THE POLICIES LISTED IN THE STUDENT HANDBOOK
+Contribution:
+- a. Viswanath Raju Indukuri: 33%
+- b. Snehal Shivaji Molavade: 33%
+- c. Sai Vivekanand Reddy Vangala: 33%
 
-## Team Members and Contributions
+## Individual Contributions
 
-### Member 1 (33%) - Backend Development and RAG Implementation
-- Designed and developed the FastAPI backend architecture
-- Implemented the RAG system using LlamaIndex and NVIDIA services
-- Created the JWT authentication system
-- Developed API endpoints for document processing and analysis
-- Integrated vector store functionality using Milvus
+### Viswanath Raju Indukuri
+- **Frontend Development**:
+  - Created responsive Streamlit interface
+  - Implemented document grid view and viewer
+  - Developed user authentication UI
+  - Designed interactive analysis tools
 
-### Member 2 (33%) - Frontend Development and User Experience
-- Created the Streamlit frontend interface
-- Designed the document viewer and chat interface
-- Implemented real-time response streaming
-- Developed the report generation interface
-- Created user authentication flows and error handling
+- **FastAPI Backend**:
+  - Implemented secure endpoints
+  - Created document analysis routes
+  - Developed Q&A functionality
+  - Integrated JWT authentication
 
-### Member 3 (33%) - Infrastructure and Data Pipeline
-- Set up the Airflow pipeline for data collection
-- Implemented AWS S3 and Snowflake integration
-- Created Docker containerization setup
-- Managed cloud infrastructure and deployment
-- Developed the data processing pipeline
+- **Report Generation**:
+  - Developed multi-modal report templates
+  - Implemented image integration
+  - Created PDF export functionality
+  - Designed report styling
 
-## Project Overview
+### Snehal Shivaji Molavade
+- **Data Pipeline**:
+  - Designed Airflow DAG architecture
+  - Implemented web scraping logic
+  - Created data validation checks
+  - Managed error handling
 
-The Multimodal RAG System for CFA Publications represents a sophisticated approach to document processing and analysis, specifically designed for handling CFA Institute Research Foundation Publications. This system combines advanced natural language processing, computer vision, and machine learning techniques to provide a comprehensive solution for document understanding and interaction.
+- **Storage Integration**:
+  - Set up AWS S3 configuration
+  - Implemented Snowflake integration
+  - Created storage optimization
+  - Managed data migration
 
-### Core Capabilities
+- **Multi-modal Processing**:
+  - Implemented text extraction
+  - Developed image processing
+  - Created metadata management
+  - Optimized processing pipeline
 
-#### 1. Automated Data Collection
-- Systematic scraping of CFA publications using Airflow and Selenium
-- Intelligent document classification and categorization
-- Automated metadata extraction and storage
-- Real-time updates and synchronization
+### Sai Vivekanand Reddy Vangala
+- **RAG Implementation**:
+  - Set up NVIDIA model integration
+  - Implemented vector storage
+  - Created context management
+  - Developed retrieval logic
 
-#### 2. Document Processing
-- Advanced PDF text extraction with PyMuPDF
-- Intelligent document chunking for optimal processing
-- Image and table detection with computer vision
-- Multi-format support including text, images, and tables
+- **Docker Configuration**:
+  - Created containerization setup
+  - Managed service orchestration
+  - Optimized container performance
+  - Implemented CI/CD pipeline
 
-#### 3. RAG Implementation
-- Context-aware document retrieval
-- Hybrid search combining semantic and keyword approaches
-- Source attribution and relevance scoring
-- Dynamic prompt generation and optimization
+- **Documentation**:
+  - Created technical documentation
+  - Designed architecture diagrams
+  - Wrote API documentation
+  - Managed project documentation
 
-#### 4. User Interface
-- Intuitive document navigation and selection
-- Real-time chat interface with streaming responses
-- Interactive document viewer with highlighting
-- Custom report generation capabilities
+## Description
+This project implements a comprehensive Multi-modal Retrieval Augmented Generation (RAG) system for CFA Institute Research Foundation Publications. The system automates the extraction of text and images from PDF files, stores them securely, and provides an interactive interface for users to explore and analyze the documents through various features like document summaries, Q&A capabilities, and report generation. By leveraging advanced AI technologies and cloud infrastructure, we create a seamless experience for accessing and analyzing financial research publications.
 
-## System Architecture Diagram:
-![multi-modal_rag_system](https://github.com/user-attachments/assets/b7c6c2be-84ba-4eff-bf96-4d6611169a37)
+**Documentation**: [Codelab Documentation Link]
+
+**Demo Video Link**: [Video Link]
+
+**Application URL**: http://viswanath.me:8501/
+
+**Backend Service Link**: http://viswanath.me:8000/docs
+
+**Data Processing Link**: http://localhost:8080/home
+
+## Architecture
+![multimodal_rag_architecture](architecture_diagram_link)
 
 
-### 1. Data Ingestion Layer
+## About
 
-#### Web Scraping Component
-- Automated scheduling with Airflow
-- Intelligent crawling of CFA website
-- Document download and verification
-- Error handling and retry mechanisms
+### Problem Statement
+The challenge we addressed was to create an intelligent system that could effectively process, analyze, and present CFA Institute's research publications. We needed to handle both text and visual content, implement advanced retrieval mechanisms, and provide users with tools to interact with this knowledge base effectively.
 
-#### Storage Management
-- AWS S3 for document storage
-- Snowflake for structured data and metadata
-- Efficient data organization and retrieval
-- Backup and versioning support
+### Scope
+The project encompasses several key areas that work together to create a comprehensive solution:
 
-### 2. Processing Layer
+The Data Ingestion Pipeline utilizes Apache Airflow to orchestrate the scraping and processing of CFA publications. This system automatically extracts text and images from documents, ensuring all content is properly captured and organized for further processing.
 
-#### Document Processing Pipeline
-- Text extraction and normalization
-- Image and table processing
-- Metadata extraction and enrichment
-- Quality assurance checks
+Our Storage Solution combines AWS S3 for document storage with Snowflake for metadata management. This dual-storage approach ensures that both structured and unstructured data are handled efficiently while maintaining quick access capabilities.
 
-#### Vector Processing
-- Document embedding generation
-- Milvus vector store integration
-- Similarity search optimization
-- Index management and updates
+The Multi-modal RAG Implementation represents the core of our system. It processes both text and images intelligently, understanding the relationships between different content types and enabling sophisticated query responses. This system ensures that users receive contextually relevant information from their queries.
 
-### 3. Presentation Layer
+The User Interface provides an intuitive way to interact with the system. Through Streamlit, we've created a responsive frontend that allows users to explore documents, ask questions, and generate comprehensive reports. The interface is designed to be both powerful and easy to use.
 
-#### Frontend Components
-- Responsive document grid view
-- Interactive chat interface
-- Document preview and navigation
-- Progress indicators and notifications
+The Backend Services, built with FastAPI, handle all the complex processing while ensuring security and performance. These services manage everything from user authentication to document analysis, providing a robust foundation for the entire system.
 
-#### User Management
-- Secure authentication flow
-- Session management
-- Role-based access control
-- User preferences handling
+### Key Features
 
-## Security Features
+Our Data Processing capabilities are comprehensive and automated. The system handles document extraction, including both text and images, and processes this content to enable intelligent retrieval. The processed data is then stored securely and efficiently in our cloud infrastructure.
 
-### Authentication System
-- JWT-based authentication
-- Secure password hashing with bcrypt
-- Token refresh mechanism
-- Session timeout handling
+The Document Analysis system is powered by advanced AI models that understand both text and visual content. Users can generate summaries, ask questions, and receive answers that draw from the entire knowledge base. The system maintains context awareness, ensuring responses are relevant and accurate.
 
-### Data Protection
-- Encrypted data storage
-- Secure file handling
-- Access control mechanisms
-- Audit logging
+Our Report Generation feature creates professional documents that combine text and visual elements in the responses. These visual knowledge in reports make it easy to share insights from the analysis.
 
-## Performance Optimizations
+## Detailed System Overview
 
-### Vector Search
-- Optimized index structures
-- Caching mechanisms
-- Batch processing
-- Query optimization
+### 1. Data Acquisition and Processing
+The system begins with automated data collection from CFA Institute Research Foundation Publications:
 
-### Response Generation
-- Streaming response handling
-- Concurrent processing
-- Resource management
-- Load balancing
+- **Web Scraping (Airflow DAG)**:
+  - Extracts PDF files, titles, and summaries
+  - Downloads images from publications
+  - Processes metadata systematically
+  - Implements error handling and retry mechanisms
 
-## Setup Instructions
+- **Storage Integration**:
+  - AWS S3 buckets for PDFs and images
+  - Snowflake database for structured metadata
+  - Efficient data organization and retrieval systems
+
+### 2. Multi-modal RAG Implementation
+Advanced RAG system combining text and image analysis:
+
+- **Text Processing**:
+  - Document chunking and indexing
+  - Semantic understanding
+  - Context preservation
+  - Vector embeddings generation
+
+- **Image Processing**:
+  - Visual content extraction
+  - Image-text alignment
+  - Feature extraction
+  - Multi-modal context integration
+
+- **RAG Components**:
+  - OpenAI API/ NVIDIA with llama utilization
+  - Vector DB management
+
+### 3. Security and Authentication
+Robust security measures protect user data and system access:
+
+- **User Authentication**:
+  - JWT-based authentication
+  - Secure password handling
+  - Session management
+
+### 4. User Interface Features
+Comprehensive interface for document interaction:
+
+- **Document Selection**:
+  - Grid view with thumbnails
+  - Dropdown navigation
+  - Search functionality
+  - Filtering options
+
+- **Document Viewer**:
+  - PDF rendering
+  - Image display
+  - Text extraction view
+  - Navigation controls
+
+- **Analysis Tools**:
+  - Interactive Q&A interface
+  - Summary generation
+  - Report creation
+
+## Technical Details
+
+### Data Flow
+1. **Data Ingestion**:
+```python
+# Airflow DAG task for web scraping
+def scrape_cfa_publications():
+    # Web scraping logic
+    page_content = get_page_content(url)
+    publications = extract_publications(page_content)
+    for pub in publications:
+        process_publication(pub)
+```
+
+2. **Document Processing**:
+```python
+# PDF processing with PyMuPDF
+def process_pdf(pdf_content):
+    doc = fitz.open(stream=pdf_content, filetype="pdf")
+    text_content = ""
+    images = []
+    for page in doc:
+        text_content += page.get_text()
+        images.extend(page.get_images())
+    return text_content, images
+```
+
+3. **RAG Implementation**:
+```python
+# Multi-modal RAG query processing
+async def process_query(query, context):
+    # Initialize RAG components
+    text_embeddings = generate_embeddings(query)
+    relevant_chunks = retrieve_context(text_embeddings)
+    
+    # Generate response
+    response = await generate_response(query, relevant_chunks)
+    return response
+```
+
+### Storage Schema
+
+1. **Snowflake Table Structure**:
+```sql
+CREATE TABLE publications (
+    title STRING,
+    brief_summary STRING,
+    pdf_link STRING,
+    image_link STRING,
+    created_at TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP()
+);
+```
+
+2. **Vector Store Configuration**:
+```python
+vector_store = MilvusVectorStore(
+    host=MILVUS_HOST,
+    port=MILVUS_PORT,
+    dim=1024,
+    collection_name="document_store"
+)
+```
+
+## Project Structure
+```.
+├── Backend_FastAPIs
+│   ├── Dockerfile
+│   ├── __pycache__
+│   └── main.py
+├── Data_acquisition
+│   ├── config
+│   ├── dags
+│   ├── docker-compose.yaml
+│   ├── dockerfile
+│   ├── logs
+│   └── plugins
+├── Frontend_Streamlit
+│   ├── Dockerfile
+│   └── app.py
+├── LICENSE
+├── Milvus
+│   └── docker-compose.yml
+├── Poc_files
+│   ├── S3_test.py
+│   ├── cfa_pdfs_images_s3.py
+│   ├── cfa_pdfs_images_s3_csv.py
+│   ├── cfa_pdfs_images_s3_sf.py
+│   ├── cfa_pdfs_img_local.py
+│   ├── cfa_pdfs_local.py
+│   ├── cfa_pdfs_s3.py
+│   ├── cfa_summary_local.py
+│   ├── cfa_texts
+│   ├── multimodal_report_generation (1).ipynb
+│   ├── pdf-image_scrape.py
+│   ├── pdf-image_scrape2.py
+│   ├── publications_data.csv
+│   ├── requirements.txt
+│   └── snowflake_con_test.py
+├── docker-compose.yml
+└── requirements.txt
+```
+
+## Setup and Deployment
 
 ### Prerequisites
-1. Docker and Docker Compose installation
-2. AWS account with appropriate permissions
-3. Snowflake account setup
-4. NVIDIA and OpenAI API keys
-5. Python 3.9 or higher
+- Docker and Docker Compose v2.0+
+- AWS Account with S3 access
+- Snowflake Account with admin privileges
+- OpenAI API Key
+- NVIDIA API Key (optional)
 
-### Environment Configuration
-1. AWS credentials configuration
-2. Snowflake connection setup
-3. API key management
-4. Environment variable configuration
+### Environment Variables
+```bash
+# AWS Configuration
+AWS_ACCESS_KEY_ID=your_access_key
+AWS_SECRET_ACCESS_KEY=your_secret_key
+AWS_REGION=us-east-1
+S3_BUCKET=your_bucket_name
 
-### Installation Steps
-1. Repository cloning and setup
-2. Dependencies installation
-3. Database initialization
-4. Service configuration
+# Snowflake Configuration
+SNOWFLAKE_ACCOUNT=your_account
+SNOWFLAKE_USER=your_user
+SNOWFLAKE_PASSWORD=your_password
+SNOWFLAKE_DATABASE=your_database
+SNOWFLAKE_SCHEMA=your_schema
 
-### Deployment
-1. Docker container building
-2. Service orchestration
-3. Environment verification
-4. System health checks
+# API Keys
+OPENAI_API_KEY=your_openai_key
+NVIDIA_API_KEY=your_nvidia_key
 
-## Usage Guide
+# Application Settings
+JWT_SECRET_KEY=your_secret_key
+FRONTEND_URL=http://localhost:8501
+BACKEND_URL=http://localhost:8000
+```
 
-### Document Management
-1. Uploading and processing documents
-2. Managing document metadata
-3. Organizing document collections
-4. Searching and filtering
+### Local Development Setup
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd [repository-name]
+```
 
-### Query Interface
-1. Formulating effective queries
-2. Understanding response formats
-3. Managing conversation context
-4. Utilizing advanced features
+2. Set up environment variables:
+```bash
+cp .env.example .env
+# Edit .env with your credentials
+```
 
-### Report Generation
-1. Creating custom reports
-2. Including multimodal content
-3. Formatting and styling
-4. Exporting and sharing
+3. Start the development environment:
+```bash
+docker-compose -f docker-compose.dev.yml up -d
+```
 
-## Error Handling and Recovery
+### Production Deployment
+1. Configure production environment:
+```bash
+docker-compose -f docker-compose.prod.yml up -d
+```
 
-### System Monitoring
-- Health check implementation
-- Error logging and tracking
-- Performance monitoring
-- Alert systems
+2. Access the applications:
+- Frontend: http://localhost:8501
+- Backend: http://localhost:8000/docs
+- Airflow: http://localhost:8080
 
-### Recovery Procedures
-- Automatic retry mechanisms
-- Fallback strategies
-- Data consistency checks
-- System state recovery
+## API Documentation
+Full API documentation available at http://viswanath.me:8000/docs
+
+### Key Endpoints:
+1. **Authentication**:
+   - POST /register
+   - POST /login
+   - GET /users/me
+
+2. **Document Management**:
+   - GET /documents
+   - GET /document-content
+   - POST /analyze-documents
+
+3. **Analysis**:
+   - POST /generate-report
+   - POST /query
+   - POST /summarize
 
 ## Future Enhancements
+1. **Advanced Search**:
+   - Semantic search capabilities
+   - Cross-document references
+   - Historical analysis
 
-### Planned Features
-1. Advanced visualization capabilities
-2. Enhanced multimodal processing
-3. Improved search algorithms
-4. Extended API functionality
+2. **UI Improvements**:
+   - Real-time collaboration
+   - Advanced visualization
+   - Custom report templates
 
-### Scalability Improvements
-1. Distributed processing
-2. Enhanced caching
-3. Performance optimization
-4. Resource management
+3. **Technical Upgrades**:
+   - GPU acceleration
+   - Enhanced caching
+   - Distributed processing
 
-## Support and Maintenance
+## Troubleshooting Guide
+1. **Common Issues**:
+   - Docker container startup failures
+   - Database connection issues
+   - API authentication problems
 
-### Documentation
-- API documentation
-- User guides
-- Troubleshooting guides
-- Best practices
-
-### Support Channels
-- Issue tracking
-- Support tickets
-- Documentation updates
-- Community engagement
-
-This comprehensive system provides a robust solution for processing and analyzing CFA publications, combining advanced technologies with user-friendly interfaces to deliver an efficient and effective document analysis platform.
+2. **Solutions**:
+   - Check environment variables
+   - Verify network connectivity
+   - Review container logs
