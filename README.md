@@ -64,7 +64,7 @@ Contribution:
 ## Description
 This project implements a comprehensive Multi-modal Retrieval Augmented Generation (RAG) system for CFA Institute Research Foundation Publications. The system automates the extraction of text and images from PDF files, stores them securely, and provides an interactive interface for users to explore and analyze the documents through various features like document summaries, Q&A capabilities, and report generation. By leveraging advanced AI technologies and cloud infrastructure, we create a seamless experience for accessing and analyzing financial research publications.
 
-**Documentation**: [Codelab Documentation Link]
+**Documentation**: [[Codelab Documentation Link]](https://codelabs-preview.appspot.com/?file_id=16rva6cQAW035xxCOuIZzpcxS_c5HmKfPp2t2TbLWZ6A#6)
 
 **Demo Video Link**: [Video Link]
 
